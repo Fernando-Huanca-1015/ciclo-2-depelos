@@ -4,16 +4,16 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxWidth="1.7976931348623157E308" prefHeight="400.0" prefWidth="718.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.calcfx.control.CalcControl">
+<VBox maxWidth="1.7976931348623157E308" prefHeight="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.calcfx.control.CalcControl">
    <children>
-      <HBox maxWidth="1.7976931348623157E308" prefHeight="377.0" prefWidth="726.0">
+      <HBox maxWidth="1.7976931348623157E308" prefHeight="377.0">
          <children>
             <Pane>
                <children>
                   <VBox layoutX="14.0" layoutY="14.0">
                      <children>
                         <TextField fx:id="txtResultado" />
-                        <GridPane maxHeight="1.7976931348623157E308" prefHeight="264.0" prefWidth="230.0">
+                        <GridPane maxHeight="1.7976931348623157E308" prefHeight="300.0">
                           <columnConstraints>
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
                             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -24,7 +24,6 @@
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                           </rowConstraints>
                            <children>
@@ -88,12 +87,10 @@
                                  <font>
                                     <Font size="24.0" />
                                  </font></Button>
-                              <Button fx:id="btnSum" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButton" prefHeight="58.0" prefWidth="57.0" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                              <Button fx:id="btnSum" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButton" text="+" GridPane.columnIndex="3" GridPane.rowIndex="3">
                                  <font>
                                     <Font size="24.0" />
                                  </font></Button>
-                              <Button fx:id="btnraiz" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButton" text="√" GridPane.rowIndex="4" />
-                              <Button fx:id="btnexpo" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#accionButton" text="^" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                            </children>
                         </GridPane>
                      </children>
@@ -102,18 +99,17 @@
             </Pane>
             <AnchorPane prefHeight="200.0">
                <children>
-                  <TableView fx:id="tableView" layoutX="53.0" layoutY="14.0" prefHeight="200.0" prefWidth="407.0">
+                  <TableView fx:id="tableView" layoutX="14.0" layoutY="14.0" prefHeight="200.0">
                     <columns>
                       <TableColumn fx:id="cVal1" prefWidth="75.0" text="Val1" />
                       <TableColumn fx:id="cVal2" prefWidth="75.0" text="Val2" />
                         <TableColumn fx:id="cOper" prefWidth="75.0" text="Operador" />
                         <TableColumn fx:id="cResult" prefWidth="75.0" text="Resultado" />
-                        <TableColumn fx:id="cOpc" minWidth="20.0" prefWidth="72.0" text="Opciones" />
+                        <TableColumn fx:id="cOpc" minWidth="20.0" prefWidth="75.0" text="Opciones" />
                     </columns>
                   </TableView>
-                  <Button layoutX="77.0" layoutY="258.0" mnemonicParsing="false" onAction="#iniciar" text="Iniciar" />
-                  <Button layoutX="144.0" layoutY="258.0" mnemonicParsing="false" onAction="#anular" text="Apagar" />
-                  <Label layoutX="53.0" layoutY="296.0" prefHeight="40.0" prefWidth="210.0" text="Fernando André Huanca Huallpa" />
+                  <Button layoutX="28.0" onAction="#iniciar" layoutY="258.0" mnemonicParsing="false" text="Iniciar" />
+                  <Button layoutX="114.0" onAction="#anular" layoutY="258.0" mnemonicParsing="false" text="Anular" />
                </children></AnchorPane>
          </children>
       </HBox>
