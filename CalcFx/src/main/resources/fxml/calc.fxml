@@ -108,8 +108,9 @@
                         <TableColumn fx:id="cOpc" minWidth="20.0" prefWidth="75.0" text="Opciones" />
                     </columns>
                   </TableView>
-                  <Button layoutX="28.0" onAction="#iniciar" layoutY="258.0" mnemonicParsing="false" text="Iniciar" />
-                  <Button layoutX="114.0" onAction="#anular" layoutY="258.0" mnemonicParsing="false" text="Anular" />
+                  <Button layoutX="28.0" layoutY="258.0" mnemonicParsing="false" onAction="#iniciar" text="Iniciar" />
+                  <Button layoutX="114.0" layoutY="258.0" mnemonicParsing="false" onAction="#anular" text="Anular" />
+                  <Label layoutX="28.0" layoutY="304.0" text="Fernando André Huanca Huallpa" />
                </children></AnchorPane>
          </children>
       </HBox>

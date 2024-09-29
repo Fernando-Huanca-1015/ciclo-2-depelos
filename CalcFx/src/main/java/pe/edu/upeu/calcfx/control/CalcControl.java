@@ -60,16 +60,6 @@ public class CalcControl {
         switch (button.getId()){
             case "btn7","btn8","btn9","btn6","btn5","btn4","btn3","btn2","btn1","btn0":{
                 escribirNumeros(button.getText());
-                if(button.getId().equals("btn7") || button.getId().equals("btn8") ){
-
-                    if(t==0){
-                        button.setText("X");
-                        t=1;
-                    }else {
-                        button.setText("O");
-                        t=0;
-                    }
-                }
 
             }break;
             case "btnSum", "btnMul", "btnRest", "btnDiv":{
