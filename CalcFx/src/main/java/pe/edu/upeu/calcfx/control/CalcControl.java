@@ -111,10 +111,13 @@ public class CalcControl {
         to.setNum1(String.valueOf(val1));
         to.setNum2(String.valueOf(val2));
         to.setOperador(valores[1].charAt(0));
+        to.setId(indexEdit);
+
         to.setResultado(String.valueOf(txtResultado.getText()));
         if(indexEdit!=-1){
-            serviceI.actualizarResultados(to, indexEdit);
+            serviceI.actualizarResultados(to, to.getId());
         }else{
+            System.out.println("VV:"+txtResultado.getText());
             serviceI.guardarResultados(to);
         }
         indexEdit=-1;
@@ -129,7 +132,7 @@ public class CalcControl {
 
     private void deleteOperCalc(CalcTO cal, int index) {
         System.out.println("Deleting: " + cal.getNum2());
-        serviceI.eliminarResultados(index);
+        serviceI.eliminarResultados(cal.getId());
         listaOper();
         //tableView.getItems().remove(cal);  // Elimina la operación del TableView
     }
@@ -145,13 +148,13 @@ public class CalcControl {
                 editButton.getStyleClass().setAll("btn", "btn-success");
                 editButton.setOnAction(event -> {
                     CalcTO cal = getTableView().getItems().get(getIndex());
-                    editOperCalc(cal, getIndex());
+                    editOperCalc(cal, cal.getId());
                 });
 
                 deleteButton.getStyleClass().setAll("btn", "btn-danger");
                 deleteButton.setOnAction(event -> {
                     CalcTO cal = getTableView().getItems().get(getIndex());
-                    deleteOperCalc(cal,getIndex());
+                    deleteOperCalc(cal,cal.getId());
                 });
             }
 
