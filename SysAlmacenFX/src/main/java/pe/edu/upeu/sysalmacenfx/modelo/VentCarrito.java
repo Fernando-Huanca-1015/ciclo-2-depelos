@@ -32,6 +32,7 @@ public class VentCarrito {
     public Double ptotal;
     @Column(name = "estado", nullable = false)
     public int estado;
+
     @ManyToOne
     @JoinColumn(name = "id_usuario", nullable = false)
     public Usuario usuario;

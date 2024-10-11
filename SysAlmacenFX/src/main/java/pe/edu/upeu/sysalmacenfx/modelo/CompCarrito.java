@@ -35,6 +35,6 @@ public class CompCarrito {
     @Column(name = "estado", nullable = false)
     private int estado;
     @ManyToOne
-    @JoinColumn(name = "id_usuario", nullable = false)
+    @JoinColumn(name = "id_usuario",  nullable = false)
     private Usuario usuario;
 }

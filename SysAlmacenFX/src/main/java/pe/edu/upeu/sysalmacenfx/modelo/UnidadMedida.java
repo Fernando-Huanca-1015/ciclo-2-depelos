@@ -20,4 +20,3 @@ public class UnidadMedida {
     @Column(name = "nombre_medida", nullable = false, length = 60)
     private String nombreMedida;
 }
-

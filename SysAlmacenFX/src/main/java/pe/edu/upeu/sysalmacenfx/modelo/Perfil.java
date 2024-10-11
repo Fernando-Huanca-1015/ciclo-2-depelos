@@ -14,7 +14,7 @@ public class Perfil {
     @Column(name = "id_perfil", nullable = false)
     private Long idPerfil;
     @Size(max = 40)
-    @Column (length = 40)
+    @Column(length = 40)
     private String nombre;
     @Size(max = 6)
     @Column(length = 6)

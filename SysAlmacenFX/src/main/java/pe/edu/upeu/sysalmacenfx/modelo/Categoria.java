@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
+
 @Entity
 @Table(name = "upeu_categoria")
 public class Categoria {
@@ -19,4 +20,6 @@ public class Categoria {
     private Long idCategoria;
     @Column(name = "nombre", nullable = false, length = 60)
     private String nombre;
+
 }
+

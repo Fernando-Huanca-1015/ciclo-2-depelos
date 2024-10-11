@@ -44,6 +44,7 @@ public class Venta {
     private String serie;
     @Column(name = "tipo_doc", nullable = false, length = 10)
     private String tipoDoc;
+
     @OneToMany(mappedBy = "venta", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<VentaDetalle> ventaDetalles;
 }
