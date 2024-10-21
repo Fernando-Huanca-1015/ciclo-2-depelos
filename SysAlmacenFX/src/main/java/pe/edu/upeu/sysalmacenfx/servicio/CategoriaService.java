@@ -48,7 +48,7 @@ public class CategoriaService {
     }
     //B
     public Categoria searchById(Long id){
-        return repo.findById(id).get();
+        return repo.findById(id).orElse(null);
     }
 
 
