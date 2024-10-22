@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="miContenedor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.ProductoController">
+<AnchorPane fx:id="miContenedor" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.ProductoController">
     <children>
         <VBox layoutX="14.0" layoutY="14.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefWidth="632.0">
             <children>
@@ -133,12 +133,12 @@
                                         <Insets left="5.0" right="5.0" />
                                     </GridPane.margin>
                                 </ComboBox>
-                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Guardar" GridPane.columnIndex="1" GridPane.rowIndex="8">
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#validarFormulario" text="Guardar" GridPane.columnIndex="1" GridPane.rowIndex="8">
                                     <GridPane.margin>
                                         <Insets left="5.0" right="5.0" />
                                     </GridPane.margin>
                                 </Button>
-                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="8">
+                                <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#cancelarAccion" text="Cancelar" GridPane.columnIndex="2" GridPane.rowIndex="8">
                                     <GridPane.margin>
                                         <Insets left="5.0" right="5.0" />
                                     </GridPane.margin>
@@ -146,7 +146,7 @@
                                 <Label fx:id="lbnMsg" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="17.0" prefWidth="402.0" GridPane.columnSpan="2147483647" GridPane.rowIndex="9" GridPane.rowSpan="2" />
                             </children>
                         </GridPane>
-                  <Label text="Fernando Andre Huanca Huallpa" AnchorPane.leftAnchor="40.0" AnchorPane.topAnchor="300.0" />
+                  <Label layoutX="36.0" layoutY="358.0" text="Fernando Andre Huanca Huallpa" AnchorPane.leftAnchor="36.0" AnchorPane.topAnchor="358.0" />
                     </children>
                 </AnchorPane>
                 <AnchorPane maxWidth="1.7976931348623157E308">
