@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane  xmlns="http://javafx.com/javafx/17.0.2-ea" fx:id="bp" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.GUIMainFX">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER" fx:id="menuBarFx">
+
+      </MenuBar>
+   </top>
+   <center>
+      <TabPane fx:id="tabPaneFx" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+
+      </TabPane>
+   </center>
+</BorderPane>

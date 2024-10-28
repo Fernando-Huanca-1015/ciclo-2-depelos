@@ -15,12 +15,13 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-@Table(name = "upeu_producto")
+@Table(name = "upeu_producto")  //Bonnier (1p)
 public class Producto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id_producto")
     private Long idProducto;
+
     @NotNull(message = "El nombre no puede estar vacío")
     @Size(min = 2, max = 120, message = "El nombre debe tener entre 2 y 120 caracteres")
     @Column(name = "nombre", nullable = false, length = 120)
@@ -41,7 +42,6 @@ public class Producto {
     @Column(name = "stockold", nullable = false)
     private Double stockOld;
 
-
     @NotNull(message = "Categoria no puede estar vacío")
     @ManyToOne
     @JoinColumn(name = "id_categoria", referencedColumnName = "id_categoria",
@@ -59,6 +59,4 @@ public class Producto {
     @JoinColumn(name = "id_unidad", referencedColumnName = "id_unidad",
             nullable = false, foreignKey = @ForeignKey(name = "FK_UNIDADMEDIDA_PRODUCTO"))
     private UnidadMedida unidadMedida;
-
-
 }
