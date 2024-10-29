@@ -56,9 +56,9 @@
                </padding>
             </AnchorPane>
          </children></AnchorPane>
-      <AnchorPane layoutX="5.0" layoutY="360.0" prefHeight="61.0" style="-fx-background-color: yellow;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <AnchorPane layoutX="5.0" layoutY="360.0" prefHeight="61.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <children>
-            <Button fx:id="btnIngresar" onAction="#login" layoutX="77.0" layoutY="14.0" mnemonicParsing="false" style="-fx-background-color: #43bb73;" text="Ingresar" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button fx:id="btnIngresar" layoutX="77.0" layoutY="14.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #43bb73;" text="Ingresar" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="0.0" />
          </children></AnchorPane>
    </children>
 </AnchorPane>
