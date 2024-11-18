@@ -5,8 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-
-<AnchorPane maxWidth="1.7976931348623157E308" prefHeight="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.ProdAutoCompControl">
+<AnchorPane fx:id="miContenedor" maxWidth="1.7976931348623157E308" prefHeight="400.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pe.edu.upeu.sysalmacenfx.control.ProdAutoCompControl">
    <children>
       <GridPane layoutX="14.0" layoutY="14.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="10.0">
         <columnConstraints>
@@ -39,9 +38,9 @@
                   <Insets left="5.0" />
                </padding>
             </Label>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <TextField GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <TextField fx:id="txtBuscarProd" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtPrecio" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <TextField fx:id="txtStock" GridPane.columnIndex="5" GridPane.rowIndex="1" />
          </children>
       </GridPane>
    </children>

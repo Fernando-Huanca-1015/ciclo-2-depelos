@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="ebf3d0b9-4dcc-4620-9157-90ddf23bb384">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="almacen_dbs"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="513"/>
+	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="473"/>
+	<parameter name="idventa" class="java.lang.Long">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="imagenurl" class="java.lang.String"/>
+	<parameter name="urljasper" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select v.*, c.nombres from upeu_venta v, upeu_cliente c where v.dniruc=c.dniruc and id_venta=$P{idventa}]]>
+	</queryString>
+	<field name="id_venta" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="id_venta"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_venta"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="fecha_gener" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_gener"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_gener"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="igv" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="igv"/>
+		<property name="com.jaspersoft.studio.field.label" value="igv"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="num_doc" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="num_doc"/>
+		<property name="com.jaspersoft.studio.field.label" value="num_doc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="preciobase" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="preciobase"/>
+		<property name="com.jaspersoft.studio.field.label" value="preciobase"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="preciototal" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="preciototal"/>
+		<property name="com.jaspersoft.studio.field.label" value="preciototal"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="serie" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="serie"/>
+		<property name="com.jaspersoft.studio.field.label" value="serie"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="tipo_doc" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="tipo_doc"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo_doc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="dniruc" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="dniruc"/>
+		<property name="com.jaspersoft.studio.field.label" value="dniruc"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="id_usuario" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="id_usuario"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_usuario"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_venta"/>
+	</field>
+	<field name="nombres" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="nombres"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombres"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="upeu_cliente"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="13" y="14" width="169" height="42" uuid="13d3bc7e-0d2a-4d18-9466-1dd3c5923586"/>
+				<imageExpression><![CDATA[$P{imagenurl}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="210" y="25" width="191" height="20" uuid="0643943b-ba16-4427-b7f1-e1fa939825a6"/>
+				<textElement>
+					<font fontName="Arial Black" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comprobante de Venta]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31" splitType="Stretch">
+			<staticText>
+				<reportElement x="40" y="0" width="70" height="20" uuid="409b48f7-34fd-49f4-89f3-9ab6e14b6f30"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[DNI/RUC]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="110" y="0" width="100" height="20" uuid="5bfe965d-53b3-4301-b01d-a90667ed445e"/>
+				<textFieldExpression><![CDATA[""+$F{dniruc}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="210" y="2" width="70" height="24" uuid="cc507f16-e1a2-48f4-8358-204564dc5e87">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9d2913be-d63c-49f3-80f1-7c6e41f95324"/>
+				</reportElement>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cliente:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="280" y="2" width="250" height="29" uuid="0b35400c-49fc-43a0-9314-5c61bcc86a9e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="9d2913be-d63c-49f3-80f1-7c6e41f95324"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{nombres}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="35" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="263" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="552" height="200" uuid="68e64974-398a-41ad-8779-8283a5b99f3e"/>
+				<subreportParameter name="idventa">
+					<subreportParameterExpression><![CDATA[$P{idventa}]]></subreportParameterExpression>
+				</subreportParameter>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{urljasper}]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement x="280" y="200" width="80" height="20" uuid="d47b22b6-6a7b-4496-b2f3-d1a282483799"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio Base S/.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="200" width="135" height="20" forecolor="#3366FF" uuid="791f5316-8a91-461b-8553-33afcebdbe22"/>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{preciobase}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="220" width="70" height="20" uuid="4606512a-f0db-449f-9472-3b956ceb7ac8"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[IGV S/.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="223" width="135" height="20" uuid="8669e535-aa25-4af2-872a-087c76f5ef1a"/>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{igv}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="280" y="243" width="82" height="20" uuid="3c115a2c-1aeb-47ce-934c-62b3c55237bc"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Precio Total S/.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="390" y="243" width="135" height="20" forecolor="#3366FF" uuid="aaafc73c-5082-4864-81eb-08e1ef64c8cf"/>
+				<textElement textAlignment="Left">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{preciototal}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="24" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="26" splitType="Stretch"/>
+	</summary>
+</jasperReport>
